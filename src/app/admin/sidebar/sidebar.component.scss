@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+*{
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+mat-icon{
+  color: rgb(70, 68, 68);
+  font-family: 'Material Icons';
+  vertical-align: middle;
+}
+.top{
+  margin-top: 15px;
+  padding: 8px;
+  margin-left: 160px;
+  font-size: 30px;
+}
+.user{
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  img{
+    margin-top: 2rem;
+    width: 120px;
+    height: 120px;
+    margin-left: 3.5rem;
+  }
+  .name{
+    color: black;
+  }
+  .mail{
+    margin-top: -1rem;
+    color: rgb(83, 47, 3);
+  }
+}
+.menu-head{
+  color: #466be0;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.menu-item{
+  margin: 0 10px 0 10px;
+  .menu-button{
+    display: block;
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .menu-button span{
+    margin-left: 1rem;
+    color: #606985;
+    font-weight: 600;
+  }
+  .menu-button:hover{
+    background-color: #605c6d;
+  }
+  .menu-button:focus{
+    background-color: #605c6d;
+  }
+}

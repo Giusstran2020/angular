@@ -1,0 +1,17 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <div class="content mat-app-background">
+      <mat-toolbar color="primary">
+        Stream video
+        <div class="flex-stretch"></div>
+        <mat-icon>bedtime</mat-icon>
+        <mat-slide-toggle [formControl]="toggleControl" class="mr-8">
+        </mat-slide-toggle>
+      </mat-toolbar>
+      <canvas id="canvas" class="canvas" ></canvas>
+      <img id="img-ipcam" class="img" src="http://192.168.1.78:8080/video" crossorigin="anonymous">
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+

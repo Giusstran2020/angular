@@ -1,0 +1,152 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <meta name="name" value="Branded header with form">
+    <meta name="category" value="overlays.slide-overs">
+    <div class="content">
+      <div id="app">
+      </div>
+      <div>
+        <form (submit)="onProjectData(postForm)" #postForm="ngForm">
+          <div class="top-0 overflow-hidden" >
+            <div class="absolute inset-0 overflow-auto">
+              <section  class="absolute inset-y-0 right-0 w-full max-w-xs">
+                <div class="bg-white shadow-xl">
+                  <header class="space-y-1 py-6 px-4 bg-indigo-700">
+                    <div class="flex items-center justify-between">
+                      <h2 class="text-lg leading-7 font-medium text-white">
+                        New Project
+                      </h2>
+                      <!-- <span>
+                        <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon" class="text-indigo-200 hover:text-white">
+                          <mat-icon>close</mat-icon>
+                        </button>
+                      </span> -->
+                    </div>
+                    <div>
+                      <p class="text-sm leading-5 text-indigo-300">
+                        Get start
+                      </p>
+                    </div>
+                  </header>
+                  <div class="text-sm leading-5 text-indigo-300">
+                    <div class="px-4 divide-y divide-gray-200">
+                      <div class="space-y-6 pt-6 pb-5">
+                        <div lass="space-y-1">
+                          <label for="project_name" class="block text-sm font-medium leading-5 text-gray-900">Project name
+                          </label>
+                          <div class="relative rounded-md shadow-sm">
+                            <mat-form-field>
+                              <input type="text" matInput name="title" required ngModel>
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        <div class="space-y-1">
+                          <label for="description" class="block text-sm font-medium leading-5 text-gray-900">Description
+                          </label>
+                          <div class="relative rounded-md shadow-sm">
+                            <mat-form-field>
+                              <textarea matInput name="content" rows="4" required ngModel>
+                              </textarea>
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        <div class="space-y-2">
+                          <h3 class="text-sm font-medium leading-5 text-gray-900">
+                            Team Members
+                          </h3>
+                          <div>
+                            <div class="flex space-x-2">
+                              <a href="#">
+                                <img class="inline-block h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                              </a>
+                              <a href="#">
+                                <img class="inline-block h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                              </a>
+                              <a href="#">
+                                <img class="inline-block h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt="">
+                              </a>
+                              <a href="#">
+                                <img class="inline-block h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                              </a>
+                              <div class="example-button-container">
+                                <button mat-mini-fab disabled aria-label="Example icon button with a home icon" class="transition ease-in-out duration-150">
+                                  <mat-icon>add</mat-icon>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <fieldset class="space-y-2">
+                          <legend class="text-sm leading-5 font-medium text-gray-900" aria-hidden="true">Privacy</legend>
+                          <div class="space-y-5">
+                            <div class="relative flex items-start">
+                              <div class="flex items-center h-5">
+                                <input id="privacy_public" aria-describedby="privacy_public_description" name="privacy" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                              </div>
+                              <div class="ml-3 text-sm">
+                                <label for="privacy_public"  class="font-medium text-gray-900">Public access</label>
+                                <p id="privacy_public_description" class="text-gray-500">Everyone with the link will see this project.</p>
+                              </div>
+                            </div>
+                            <div class="relative flex items-start">
+                              <div class="flex items-center h-5">
+                                <input id="privacy_private-to-project" aria-describedby="private_private-to-project_description" name="privacy" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                              </div>
+                              <div class="ml-3 text-sm">
+                                <label for="privacy_private-to-project" class="font-medium text-gray-900">Private to Project Members</label>
+                                <p id="private_private-to-project_description" class="text-gray-500">Only members of this project would be able to access.</p>
+                              </div>
+                            </div>
+                            <div class="relative flex items-start">
+                              <div class="flex items-center h-5">
+                                <input id="privacy_private" aria-describedby="privacy_private_description" name="privacy" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                              </div>
+                              <div class="ml-3 text-sm">
+                                <label for="privacy_private" class="font-medium text-gray-900">Private to you</label>
+                                <p id="privacy_private_description" class="text-gray-500">You are the only able to access this project.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <div class="space-y-4 pt-4 pb-6">
+                        <div class="flex text-sm leading-5">
+                          <a href="#" class="group space-x-2 inline-flex items-center font-medium text-indigo-600 hover:text-indigo-500">
+                            <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon" class="text-indigo-500 group-hover:text-indigo-400 transition ease-in-out duration-150">
+                              <mat-icon>open_in_new</mat-icon><span>Copy link</span>
+
+                            </button>
+                          </a>
+                        </div>
+                        <div class="flex text-sm leading-5">
+                          <a href="#" class="group space-x-2 inline-flex items-center font-medium text-gray-500 leading-5">
+                            <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon" class="text-indigo-500 group-hover:text-gray-500 transition ease-in-out duration-150">
+                              <mat-icon>question_answer</mat-icon><span>Learn more about sharing</span>
+                            </button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="px-4 py-4 space-x-4 flex justify-end">
+                      <span class="inline-flex rounded-md shadow-sm">
+                        <button type="button" class="py-2 px-4 border border-gray-300 rounded-md text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out">
+                          Cancel
+                        </button>
+                      </span>
+                      <span class="ml-3 inline-flex rounded-md shadow-sm">
+                        <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                          Save
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

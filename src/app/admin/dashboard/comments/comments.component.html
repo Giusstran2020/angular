@@ -1,0 +1,12 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidebar mode="side" opened>
+    <app-project></app-project>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-card>
+      <mat-icon (click)="sidebar.toggle()">card_travel</mat-icon>
+      <app-projectlist></app-projectlist>
+    </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
